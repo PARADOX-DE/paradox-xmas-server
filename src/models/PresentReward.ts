@@ -23,7 +23,9 @@ export class PresentReward {
       database.query("SELECT * FROM log_present_reward WHERE player_id = ? AND datetime >= CURDATE() AND datetime < CURDATE() + INTERVAL 1 DAY", [player_id], (err, res) => {
         if (err) resolve(null);
 
-        resolve(res[0]);
+        if (res && res.length > 0)
+          resolve(res[0]);
+        else resolve(null);
       });
     });
   }
@@ -33,7 +35,9 @@ export class PresentReward {
       database.query("SELECT * FROM log_present_reward WHERE christmas_code = ? AND datetime >= CURDATE() AND datetime < CURDATE() + INTERVAL 1 DAY", [christmas_code], (err, res) => {
         if (err) resolve(null);
 
-        resolve(res[0]);
+        if (res && res.length > 0)
+          resolve(res[0]);
+        else resolve(null);
       });
     });
   }
@@ -46,6 +50,7 @@ export class PresentReward {
 
           resolve(null);
         }
+        
         resolve(res);
       });
     });
