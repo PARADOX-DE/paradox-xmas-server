@@ -1,9 +1,9 @@
 {
     "database": {
-        "hostname": "vultr-prod-1d0a7d2a-0629-45e5-a1a1-6875b76f0e34-vultr-prod-9aa9.vultrdb.com",
-        "username": "vultradmin",
-        "password": "AVNS_jKBQhHfTpVcr1AJ27JW",
+        "hostname": "db.prdx.to",
+        "username": "root",
+        "password": "Nm2zefvTEOIgLfTR6EM8",
         "database": "ingame_live",
-        "port": 16751
+        "port": 3306
     }
 }
